@@ -1,7 +1,6 @@
 // https://leetcode.com/problems/roman-to-integer/
 
 class Solution {
-    // Соотнести сиволы и пары сиволов с численным эквивалентом
     let alphabet = [
         "I": 1,
         "V": 5,
@@ -18,6 +17,7 @@ class Solution {
         "CM": 900
     ]
 
+    // 20 ms
     func romanToInt(_ s: String) -> Int {
         guard s.count > 1 else { return alphabet[s]! }
         return zip(s.indices, s.indices.dropFirst())
@@ -33,42 +33,28 @@ class Solution {
                 return (stepResult, pair != nil)
             }.sum
     }
+    
+    // 28 ms
+    func romanToInt_recursive(_ s: String) -> Int {
+        guard s.count > 1 else { return alphabet[s]! }
+        let firstSymbolIndex = s.startIndex
+        let secondSymbolIndex = s.index(after: s.startIndex)
+        guard let pair = alphabet[String(s[firstSymbolIndex...secondSymbolIndex])] else {
+            return alphabet[String(s.first!)]! + romanToInt(String(s.dropFirst()))
+        }
+        return secondSymbolIndex == s.index(before: s.endIndex)
+        ? pair
+        : pair + romanToInt(String(s[s.index(after: secondSymbolIndex)...]))
+    }
 }
 
 
 let romanToInt = Solution().romanToInt
 
-func test1() {
-    19 == romanToInt("XIX")
-}
 
-func test2() {
-    9 == romanToInt("IX")
-}
-
-func test3() {
-    403 == romanToInt("CDIII")
-}
-
-func test4() {
-    414 == romanToInt("CDXIV")
-}
-
-func test5() {
-    1695 == romanToInt("MDCXCV")
-    // MD + DC + CX + XC + CV
-    // 1000 + DC + CX + XC + CV
-    // 1000 + 500 + CX + XC + CV
-    // 1000 + 500 + 100 + XC + CV
-    // 1000 + 500 + 100 + 90 + CV
-}
-
-let tests = [
-    test1,
-    test2,
-    test3,
-    test4,
-    test5
-]
-
-tests.forEach { $0() }
+19 == romanToInt("XIX")
+9 == romanToInt("IX")
+403 == romanToInt("CDIII")
+414 == romanToInt("CDXIV")
+1695 == romanToInt("MDCXCV")
+10 == romanToInt("X")
