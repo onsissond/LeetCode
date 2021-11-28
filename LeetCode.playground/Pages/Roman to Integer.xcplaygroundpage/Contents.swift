@@ -46,6 +46,39 @@ class Solution {
         ? pair
         : pair + romanToInt(String(s[s.index(after: secondSymbolIndex)...]))
     }
+    
+    
+    // 20 ms
+    func romanToInt_while(_ s: String) -> Int {
+        let alphabet: [Character: Int] = [
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        ]
+        var sum = 0
+        var index = s.startIndex
+        while index < s.endIndex {
+            let nextIndex = s.index(after: index)
+            if nextIndex == s.endIndex {
+                sum += alphabet[s[index]]!
+                break
+            }
+            let num1 = alphabet[s[index]]!
+            let num2 = alphabet[s[nextIndex]]!
+            if num2 > num1 {
+                sum += num2 - num1
+                index = s.index(after: nextIndex)
+            } else {
+                sum += num1
+                index = nextIndex
+            }
+        }
+        return sum
+    }
 }
 
 
