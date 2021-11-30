@@ -1,17 +1,17 @@
 // https://leetcode.com/problems/roman-to-integer/
 
 class Solution {
+    let alphabet: [Character: Int] = [
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    ]
     /// Runtime: 12 ms, faster than 94.59% of Swift online submissions for Roman to Integer.
     func romanToInt(_ s: String) -> Int {
-        let alphabet: [Character: Int] = [
-            "I": 1,
-            "V": 5,
-            "X": 10,
-            "L": 50,
-            "C": 100,
-            "D": 500,
-            "M": 1000
-        ]
         var previous: Int = Int.max
         return s.reduce(0) { sum, ch in
             let value = alphabet[ch]!
