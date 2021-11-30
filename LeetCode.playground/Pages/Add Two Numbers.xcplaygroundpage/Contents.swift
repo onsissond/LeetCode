@@ -17,29 +17,20 @@ class Solution {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var node1 = l1
         var node2 = l2
-        var headNode: ListNode?
-        var tailNode: ListNode?
+        let headNode = ListNode()
+        var tailNode = headNode
         var buffer = 0
-        while node1 != nil && node2 != nil {
-            let sum = node1!.val + node2!.val + buffer
+        while node1 != nil || node2 != nil || buffer > 0 {
+            let sum = (node1?.val ?? 0) + (node2?.val ?? 0) + buffer
             buffer = sum / 10
-    
-            let newNode = ListNode(sum % 10)
-            if headNode == nil && tailNode == nil {
-                headNode = newNode
-                tailNode = newNode
-            } else {
-                tailNode?.next = newNode
-                tailNode = newNode
-            }
             
-            node1 = node1!.next ?? (node2!.next != nil ? ListNode() : nil)
-            node2 = node2!.next ?? (node1 != nil ? ListNode() : nil)
+            let newNode = ListNode(sum % 10)
+            tailNode.next = newNode
+            tailNode = newNode
+            
+            node1 = node1?.next
+            node2 = node2?.next
         }
-        if buffer != 0 {
-            let newNode = ListNode(buffer)
-            tailNode?.next = newNode
-        }
-        return headNode
+        return headNode.next
     }
 }
