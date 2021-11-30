@@ -5,5 +5,6 @@
         <page name='Palindrome Number'/>
         <page name='Longest Common Prefix'/>
         <page name='Add Two Numbers'/>
+        <page name='Merge Two Sorted Lists'/>
     </pages>
 </playground>
