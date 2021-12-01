@@ -7,3 +7,4 @@
 4. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) Runtime: 44 ms, faster than 59.75% of Swift online submissions for Add Two Numbers.
 5. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) Runtime: 8 ms, faster than 98.70% of Swift online submissions for Merge Two Sorted Lists.
 6. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Valid Parentheses.
+7. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) Runtime: 56 ms, faster than 84.71% of Swift online submissions for Remove Duplicates from Sorted Array.

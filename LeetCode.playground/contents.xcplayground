@@ -7,5 +7,6 @@
         <page name='Add Two Numbers'/>
         <page name='Merge Two Sorted Lists'/>
         <page name='Valid Parentheses'/>
+        <page name='Remove Duplicates from Sorted Array'/>
     </pages>
 </playground>
