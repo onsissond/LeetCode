@@ -27,18 +27,18 @@ class Solution {
         var tail: ListNode? = head
         
         while l1 != nil || l2 != nil {
-            var node: ListNode?
-            
-            if (l1 != nil && l2 != nil && l1!.val < l2!.val) || l2 == nil {
-                node = l1.map(\.val).map(ListNode.init)
+            while l1 != nil && ((l2 != nil && l1!.val < l2!.val) || l2 == nil) {
+                let node = l1.map(\.val).map(ListNode.init)
+                tail?.next = node
+                tail = node
                 l1 = l1?.next
-            } else if (l1 != nil && l2 != nil && l1!.val >= l2!.val) || l1 == nil {
-                node = l2.map(\.val).map(ListNode.init)
+            }
+            while l2 != nil && ((l1 != nil && l1!.val >= l2!.val) || l1 == nil) {
+                let node = l2.map(\.val).map(ListNode.init)
+                tail?.next = node
+                tail = node
                 l2 = l2?.next
             }
-
-            tail?.next = node
-            tail = node
         }
         
         return head.next
