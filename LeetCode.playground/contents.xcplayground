@@ -8,5 +8,6 @@
         <page name='Merge Two Sorted Lists'/>
         <page name='Valid Parentheses'/>
         <page name='Remove Duplicates from Sorted Array'/>
+        <page name='Implement strStr()'/>
     </pages>
 </playground>
