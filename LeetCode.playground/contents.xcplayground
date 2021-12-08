@@ -10,5 +10,6 @@
         <page name='Remove Duplicates from Sorted Array'/>
         <page name='Implement strStr()'/>
         <page name='Search Insert Position'/>
+        <page name='Reverse Integer'/>
     </pages>
 </playground>
