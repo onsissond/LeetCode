@@ -11,5 +11,7 @@
         <page name='Implement strStr()'/>
         <page name='Search Insert Position'/>
         <page name='Reverse Integer'/>
+        <page name='Minimum in the window'/>
+        <page name='Bolt'/>
     </pages>
 </playground>

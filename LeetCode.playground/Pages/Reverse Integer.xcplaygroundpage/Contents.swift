@@ -25,7 +25,7 @@ class Solution {
             return multiplay(x, y - 1).flatMap { sum(x, $0) }
         } else if x < 0 && y < 0 {
             return multiplay(abs(x), abs(y))
-        } else { // x > 0 && y < 0
+        } else {
             return multiplay(abs(x), abs(y) - 1)
                 .flatMap { sum(-abs(x), -abs($0)) }
         }
