@@ -22,10 +22,10 @@ class Solution {
         var droppedCount = droppedCount
         let frequencyCharacters = string.frequency
         var frequencyNumbers = frequencyCharacters.values.frequency
-        var keys = Array(frequencyNumbers.keys).sorted(by: >)
+        var keys = Array(frequencyNumbers.keys).sorted()
         while frequencyNumbers.count > 1 && droppedCount >= 0 {
-            let larger = keys[0]
-            let smaller = keys[1]
+            let larger = keys.removeLast()
+            let smaller = keys.removeLast()
             
             let largerToSmallerCost = (larger - smaller) * frequencyNumbers[larger]!
             let smallerToZeroCost = smaller * frequencyNumbers[smaller]!
@@ -33,10 +33,10 @@ class Solution {
             if largerToSmallerCost < smallerToZeroCost {
                 frequencyNumbers[smaller] = frequencyNumbers[smaller]! + frequencyNumbers[larger]!
                 frequencyNumbers[larger] = nil
-                keys.remove(at: 0)
+                keys.append(smaller)
             } else {
                 frequencyNumbers[smaller] = nil
-                keys.remove(at: 1)
+                keys.append(larger)
             }
         }
         return frequencyNumbers.count <= 1 && droppedCount >= 0
