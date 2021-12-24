@@ -11,3 +11,4 @@
 8. [Search Insert Position](https://leetcode.com/problems/search-insert-position/) Runtime: 28 ms, faster than 88.52% of Swift online submissions for Search Insert Position.
 9. [Reverse Integer](https://leetcode.com/problems/reverse-integer/) Runtime: 8 ms, faster than 34.41% of Swift online submissions for Reverse Integer.
 10. [Remove Element](https://leetcode.com/problems/remove-element/) Runtime: 4 ms, faster than 91.57% of Swift online submissions for Remove Element.
+11. [Plus One](https://leetcode.com/problems/plus-one/) Runtime: 4 ms, faster than 89.11% of Swift online submissions for Plus One.

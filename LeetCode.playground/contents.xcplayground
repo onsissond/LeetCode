@@ -14,5 +14,6 @@
         <page name='Minimum in the window'/>
         <page name='Bolt'/>
         <page name='Remove Element'/>
+        <page name='Plus One'/>
     </pages>
 </playground>
