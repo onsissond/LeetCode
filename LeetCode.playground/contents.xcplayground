@@ -15,5 +15,6 @@
         <page name='Bolt'/>
         <page name='Remove Element'/>
         <page name='Plus One'/>
+        <page name='Complement of Base 10 Integer'/>
     </pages>
 </playground>
