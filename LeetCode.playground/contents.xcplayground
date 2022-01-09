@@ -16,5 +16,6 @@
         <page name='Remove Element'/>
         <page name='Plus One'/>
         <page name='Complement of Base 10 Integer'/>
+        <page name='Length of Last Word'/>
     </pages>
 </playground>
