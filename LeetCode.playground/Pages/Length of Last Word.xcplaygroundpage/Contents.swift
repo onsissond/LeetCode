@@ -6,14 +6,13 @@
 
 class Solution {
     func lengthOfLastWord(_ s: String) -> Int {
-        var prevChar: Character?
         var length = 0
-        s.forEach { ch in
-            if ch != " " {
-                if prevChar == " " { length = 0 }
+        for c in s.reversed() {
+            guard c == " " else {
                 length += 1
+                continue
             }
-            prevChar = ch
+            if length > 0 { return length }
         }
         return length
     }

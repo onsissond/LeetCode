@@ -15,5 +15,5 @@
 11. [Plus One](https://leetcode.com/problems/plus-one/) Runtime: 4 ms, faster than 89.11% of Swift online submissions for Plus One.
 ## 2022
 12. [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Complement of Base 10 Integer.
-13. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) Runtime: 2 ms, faster than 87.27% of Swift online submissions for Length of Last Word.
+13. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Length of Last Word.
 
