@@ -17,5 +17,6 @@
         <page name='Plus One'/>
         <page name='Complement of Base 10 Integer'/>
         <page name='Length of Last Word'/>
+        <page name='Climbing Stairs'/>
     </pages>
 </playground>
