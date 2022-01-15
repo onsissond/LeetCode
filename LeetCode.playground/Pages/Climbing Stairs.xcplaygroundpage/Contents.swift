@@ -5,19 +5,16 @@
  */
 
 class Solution {
-    var cache: [Int: Int] = [:]
-
     func climbStairs(_ n: Int) -> Int {
-        climbStairs(n, k: 0)
-    }
-    
-    func climbStairs(_ n: Int, k: Int) -> Int {
-        if k > n { return 0 }
-        if k == n { return 1 }
-        let left = climbStairs(n, k: k + 1)
-        cache[k + 1] = left
-        let right = cache[k + 2] ?? climbStairs(n, k: k + 2)
-        return left + right
+        var prevPrev = 1
+        var prev = 1
+        var k = n - 2
+        while k >= 0 {
+            prev = prevPrev + prev
+            prevPrev = prev - prevPrev
+            k -= 1
+        }
+        return prev
     }
 }
 
