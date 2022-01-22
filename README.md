@@ -17,3 +17,4 @@
 12. [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Complement of Base 10 Integer.
 13. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Length of Last Word.
 14. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) Runtime: 0 ms, faster than 100.00% of Swift online submissions for Climbing Stairs.
+15. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) Runtime: 836 ms, faster than 76.99% of Swift online submissions for Maximum Subarray.
